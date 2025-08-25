@@ -12,7 +12,7 @@ app.use(
 // this is for cors( cross origin resource sharing )
 const cors = require("cors");
 
-const allowedOrigins = ["http://localhost:3000", "https://localhost:3000", "https://Skill Hub-without-env-9mp2.vercel.app"]; // List of allowed origins
+const allowedOrigins = ["http://localhost:3000", "https://localhost:3000", "https://skillhub-kunal.vercel.app/"]; // List of allowed origins
 
 const corsOptions = {
   origin: function (origin, callback) {
