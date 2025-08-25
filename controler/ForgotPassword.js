@@ -5,6 +5,7 @@ const bcrypt = require('bcryptjs');
 const resetpasstoken = async (req, res) => {
   try {
     const { email } = req.body;
+    console.log("email is present", email);
 
     console.log("this is email from resetpasstoken controller", email);
     if (!email) {
@@ -14,7 +15,10 @@ const resetpasstoken = async (req, res) => {
       });
     }
 
+
     const existuser = await UserSchema.findOne({ email });
+    console.log("this is existuser from resetpasstoken controller", existuser);
+
 
     if (!existuser) {
       return res.status(400).json({
