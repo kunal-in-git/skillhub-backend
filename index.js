@@ -11,7 +11,7 @@ app.use(
 
 // this is for cors( cross origin resource sharing )
 const cors = require("cors");
-app.options('*', cors(corsOptions));
+
 
 const allowedOrigins = ["https://skillhub-kunal.vercel.app"]; // List of allowed origins
 
@@ -25,6 +25,7 @@ const corsOptions = {
   },
   credentials: true, // Allow cookies & JWT tokens
 };
+app.options('*', cors(corsOptions));
 app.use(cors(corsOptions));
 
 // this is for cookieparser
