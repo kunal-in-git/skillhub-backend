@@ -13,7 +13,7 @@ app.use(
 const cors = require("cors");
 app.options('*', cors(corsOptions));
 
-const allowedOrigins = ["http://localhost:3000", "https://skillhub-kunal.vercel.app"]; // List of allowed origins
+const allowedOrigins = ["https://skillhub-kunal.vercel.app"]; // List of allowed origins
 
 const corsOptions = {
   origin: function (origin, callback) {
